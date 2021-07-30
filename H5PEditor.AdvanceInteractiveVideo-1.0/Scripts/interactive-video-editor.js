@@ -1855,7 +1855,7 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.AdvanceInteractiveVideo =
         };
         var totalVideoCount;
         async function getPlaylistData(pageSize, pageIndex, searchText) {
-          var config = new KalturaConfiguration(4210563);
+          var config = new KalturaConfiguration(KalturaConfig.partnerId);
           config.serviceUrl = "https://www.kaltura.com";
           var client = new KalturaClient(config);
           // $(document).on("keyup","#input-playlist",function() {
@@ -1990,11 +1990,11 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.AdvanceInteractiveVideo =
               var listIndex = new_page + 1;
               if (listWraper == 'page_navigation') {
                 if ($("#input-playlist").val() == "") {
-                  getPlaylistData(2, listIndex, "");
+                  getPlaylistData(5, listIndex, "");
                 }
                 if ($("#input-playlist").val() != "") {
                   var searchText = $("#input-playlist").val();
-                  getPlaylistData(2, listIndex, searchText);
+                  getPlaylistData(5, listIndex, searchText);
                 }
               }
               if (listWraper == 'youtube_navigation') {
@@ -2017,11 +2017,11 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.AdvanceInteractiveVideo =
             go_to_page(pageNumber, listWraper);
             if (listWraper == 'page_navigation') {
               if ($("#input-playlist").val() == "") {
-                getPlaylistData(2, listIndex, "");
+                getPlaylistData(5, listIndex, "");
               }
               if ($("#input-playlist").val() != "") {
                 var searchText = $("#input-playlist").val();
-                getPlaylistData(2, listIndex, searchText);
+                getPlaylistData(5, listIndex, searchText);
               }
             }
             if (listWraper == 'youtube_navigation') {
@@ -2038,11 +2038,11 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.AdvanceInteractiveVideo =
               var listIndex = new_page + 1
               if (listWraper == 'page_navigation') {
                 if ($("#input-playlist").val() == "") {
-                  getPlaylistData(2, listIndex, "");
+                  getPlaylistData(5, listIndex, "");
                 }
                 if ($("#input-playlist").val() != "") {
                   var searchText = $("#input-playlist").val();
-                  getPlaylistData(2, listIndex, searchText);
+                  getPlaylistData(5, listIndex, searchText);
                 }
               }
               if (listWraper == 'youtube_navigation') {
@@ -2060,29 +2060,29 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.AdvanceInteractiveVideo =
           });
         }
         
-        getPlaylistData(2, 0, "");
+        getPlaylistData(5, 0, "");
         setTimeout(function () {
-          handlePagination(2, totalVideoCount, "page_navigation");
+          handlePagination(5, totalVideoCount, "page_navigation");
         }, 3000);
         $(document).on("keyup", "#input-playlist", function () {
           var searchText = $(this).val();
-          getPlaylistData(2, 0, searchText);
+          getPlaylistData(5, 0, searchText);
           setTimeout(function () {
-            handlePagination(2, totalVideoCount, "page_navigation");
+            handlePagination(5, totalVideoCount, "page_navigation");
           }, 3000);
         });
 
         $(document).on("click", "#kaltura", function () {
-          getPlaylistData(2, 0, "");
+          getPlaylistData(5, 0, "");
           setTimeout(function () {
             $(".kaltura-pagination").html("");
-            handlePagination(2, totalVideoCount, "page_navigation");
+            handlePagination(5, totalVideoCount, "page_navigation");
           }, 3000);
           $(document).on("keyup", "#input-playlist", function () {
             var searchText = $(this).val();
-            getPlaylistData(2, 0, searchText);
+            getPlaylistData(5, 0, searchText);
             setTimeout(function () {
-              handlePagination(2, totalVideoCount, "page_navigation");
+              handlePagination(5, totalVideoCount, "page_navigation");
             }, 3000);
           });
         });        

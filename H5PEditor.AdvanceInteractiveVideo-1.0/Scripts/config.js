@@ -1,22 +1,22 @@
 const KalturaConfig = {
-    'secret' : 'USER_SECRET_KEY',
-    'userId' : 'USER_ID', 
-    'type' : 'SESSION_TYPE', // Could be 0 or 2 
-    'partnerId' : 'USER_PARTNER_ID', 
+    'secret' : '3d835f3579b8480b145922d61b463739',
+    'userId' : 'devtest220@gmail.com', 
+    'type' : '2', 
+    'partnerId' : '4210563', 
     'expiry' : '', 
     'privileges' : ''
 }
 
 const YoutubeConfig = {
-    'channelId' : 'YOUTUBE_CHANNEL_ID',
+    'channelId' : 'UCeYxBUmMSneTrrxJY1WalqA',
     'maxResults' : '', // Set The video search limit (optional)
-    'key' : 'YOUTUBE_API_KEY',
-    'order' : 'ORDER', // can be searchSortUnspecified, date, rating, viewCount, relevance, title, videoCount
-    'part' : 'PART', // snippet
+    'key' : 'AIzaSyDjktUC-riWSQw-tnexfLENdoie3JMcurk',
+    'order' : 'date', // can be searchSortUnspecified, date, rating, viewCount, relevance, title, videoCount
+    'part' : 'snippet',
 }
 
 const VimeoConfig = {
-    'bearerToken' : 'AUTHENTICATION_TOKKEN ',
-    'channelId' : 'VIMEO_CHANNEL_ID', // NUMBER ONLY
-    'perPage' : 'PER_PAGE_ITEMS' // 5
+    'bearerToken' : '63a5c508bd3445c56a7f43eda1b5707e',
+    'channelId' : '16423',
+    'perPage' : 5
 }
