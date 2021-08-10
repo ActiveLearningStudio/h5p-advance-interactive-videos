@@ -40,6 +40,9 @@
     },
     {
       "path": "styles/require-completion.css"
+    },
+    {
+      "path": "styles/modal.css"
     }
   ],
   "preloadedDependencies": [
